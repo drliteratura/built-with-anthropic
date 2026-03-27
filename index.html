@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo construí mi firma | Daniel Rodriguez — Integrity Legal Partners</title>
+    <meta name="description" content="Cómo Daniel Rodriguez construyó una firma paralegal de inmigración completamente profesional usando inteligencia artificial de Claude — de cero presencia digital a 27+ clientes activos.">
+    <meta name="author" content="Daniel Rodriguez">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cómo construí mi firma — Daniel Rodriguez">
+    <meta property="og:description" content="Inmigrante colombiano en Salt Lake City construyó una firma paralegal completa con Claude AI. Brand, landing page, plantillas legales, tarjetas — todo en una tarde.">
+    <meta property="og:image" content="daniel-avatar-small.png">
+    <meta property="og:locale" content="es_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cómo construí mi firma — Daniel Rodriguez">
+    <meta name="twitter:description" content="Construí una firma paralegal de inmigración desde cero con Claude AI. Inmigrantes sirviendo inmigrantes con herramientas de nivel enterprise.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Daniel Rodriguez","jobTitle":"Co-Fundador","worksFor":{"@type":"LegalService","name":"Integrity Legal Partners","url":"https://integrityparalegals.com","telephone":"+1-435-200-7716","address":{"@type":"PostalAddress","streetAddress":"470 W 200 N","addressLocality":"Salt Lake City","addressRegion":"UT","postalCode":"84103","addressCountry":"US"},"knowsLanguage":["Spanish","English"]},"url":"https://www.linkedin.com/in/daniel-rodriguez-arango-6607aa3b1"}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&family=Oswald:wght@600&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --terracota: #C2410C;
+            --terracota-light: #ea580c;
+            --terracota-glow: rgba(194,65,12,0.15);
+            --navy: #1A365D;
+            --navy-dark: #0f2440;
+            --cream: #FDF6EC;
+            --bg: #0a0e1a;
+            --bg-card: #111827;
+            --bg-bubble: #1a3050;
+            --bg-step: rgba(255,255,255,0.025);
+            --border: rgba(255,255,255,0.07);
+            --border-glow: rgba(194,65,12,0.3);
+            --text: #f1f5f9;
+            --text-sub: #b0bec5;
+            --text-dim: #78909c;
+            --green: #4ade80;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Language switcher */
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 4px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 4px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-dim);
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover { color: var(--text); }
+        .lang-btn.active { background: var(--terracota); color: #fff; }
+
+        .slide {
+            max-width: 1120px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 370px;
+            gap: 56px;
+            align-items: start;
+        }
+
+        @media (max-width: 920px) {
+            .slide { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        .story { padding-top: 8px; }
+
+        .headline {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.08;
+            margin-bottom: 44px;
+        }
+
+        .headline .dot { color: var(--terracota); }
+
+        .agent-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .agent-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4956b 0%, #c08b5c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .agent-avatar svg { width: 24px; height: 24px; }
+        .agent-name { font-weight: 700; font-size: 0.95rem; }
+        .agent-role { font-size: 0.78rem; color: var(--text-dim); }
+
+        .chat-bubble {
+            background: var(--bg-bubble);
+            border-radius: 18px;
+            border-top-left-radius: 4px;
+            padding: 18px 22px;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--text);
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+
+        .timeline-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-dim);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 40px;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            bottom: 10px;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--terracota), var(--border));
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 14px;
+        }
+
+        .timeline-step:last-child { margin-bottom: 0; }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 2px solid var(--terracota-light);
+        }
+
+        .step-card {
+            background: var(--bg-step);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .step-card:hover { border-color: var(--border-glow); }
+
+        .step-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--green);
+            min-width: 38px;
+        }
+
+        .step-text { font-size: 0.9rem; font-weight: 500; }
+
+        .result-quote {
+            background: rgba(194,65,12,0.06);
+            border: 1px solid rgba(194,65,12,0.12);
+            border-radius: 14px;
+            padding: 18px 22px;
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            font-style: italic;
+            line-height: 1.65;
+        }
+
+        .card-wrapper { position: relative; }
+
+        .card-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 80px rgba(194,65,12,0.04);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid var(--terracota);
+        }
+
+        .card-brand { display: flex; align-items: center; gap: 10px; }
+
+        .card-brand-icon {
+            width: 34px;
+            height: 34px;
+            background: var(--terracota);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .card-brand-name { line-height: 1.2; }
+        .card-brand-name .primary { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; font-size: 0.95rem; color: #fff; display: block; }
+        .card-brand-name .secondary { font-family: 'Source Sans Pro', sans-serif; font-size: 0.6rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2.5px; display: block; }
+
+        .card-profile { padding: 28px 24px 22px; text-align: center; border-bottom: 1px solid var(--border); }
+
+        .card-avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            overflow: hidden;
+            box-shadow: 0 0 0 3px var(--bg-card), 0 0 0 5px var(--terracota);
+        }
+
+        .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+
+        .card-name { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .card-title { font-size: 0.88rem; color: var(--terracota-light); font-weight: 600; margin-bottom: 2px; }
+        .card-company { font-size: 0.82rem; color: var(--text-sub); margin-bottom: 10px; }
+        .card-tags { display: flex; justify-content: center; gap: 6px; font-size: 0.7rem; color: var(--terracota-light); font-weight: 500; }
+        .card-tags span { opacity: 0.5; }
+
+        .card-contacts { padding: 6px 14px; }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            transition: background 0.2s;
+        }
+
+        .contact-row:hover { background: rgba(255,255,255,0.035); }
+
+        .contact-icon {
+            width: 36px; height: 36px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; flex-shrink: 0;
+        }
+
+        .contact-icon.phone { background: rgba(34,197,94,0.1); color: #22c55e; }
+        .contact-icon.email { background: rgba(96,165,250,0.1); color: #60a5fa; }
+        .contact-icon.web { background: rgba(74,222,128,0.1); color: #4ade80; }
+        .contact-icon.linkedin { background: rgba(96,165,250,0.1); color: #60a5fa; font-weight: 700; font-size: 0.9rem; }
+
+        .contact-text { font-size: 0.87rem; font-weight: 500; }
+
+        .card-qr { padding: 14px 24px 24px; display: flex; justify-content: center; }
+
+        .qr-box {
+            background: #fff; border-radius: 12px; padding: 10px;
+            display: flex; align-items: center; justify-content: center;
+            min-width: 140px; min-height: 140px;
+        }
+
+        .qr-box img { display: block; border-radius: 4px; }
+        .qr-fallback { text-align: center; font-size: 0.75rem; color: #64748b; }
+        .qr-fallback a { color: var(--terracota); text-decoration: none; font-weight: 600; }
+
+        .badge-row { margin-top: 56px; display: flex; justify-content: center; }
+
+        .anthropic-badge {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+            padding: 10px 22px; border-radius: 10px;
+            font-size: 0.82rem; color: var(--text-dim);
+        }
+
+        .anthropic-badge svg { width: 18px; height: 18px; fill: var(--text-dim); }
+
+        @media (max-width: 920px) {
+            body { padding: 32px 16px; align-items: flex-start; justify-content: flex-start; }
+            .contact-card { max-width: 390px; margin: 0 auto; }
+        }
+
+        @media (max-width: 480px) {
+            .headline { font-size: 2.2rem; margin-bottom: 36px; }
+            .chat-bubble { font-size: 0.88rem; padding: 16px 18px; }
+            .step-card { padding: 12px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Switch -->
+    <div class="lang-switch">
+        <a href="index.html" class="lang-btn active">ES</a>
+        <a href="en.html" class="lang-btn">EN</a>
+    </div>
+
+    <div class="slide">
+
+        <!-- LEFT: HISTORIA -->
+        <div class="story">
+            <h1 class="headline">Cómo construí<br>la mía<span class="dot">.</span></h1>
+
+            <div class="agent-row">
+                <div class="agent-avatar">
+                    <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.827 3.52l5.51 16.96H24L18.163 3.52h-4.336zM0 20.48h4.663L10.49 3.52H6.163L0 20.48z"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="agent-name">Claude</div>
+                    <div class="agent-role">Agente IA &middot; Anthropic</div>
+                </div>
+            </div>
+
+            <div class="chat-bubble">
+                Necesito construir mi firma paralegal de inmigración desde cero &mdash; identidad de marca, landing page, tarjetas de presentación, plantillas de documentos legales, y un sistema para manejar 27+ casos activos. Todo optimizado para la comunidad latina en Utah.
+            </div>
+
+            <div class="timeline-label">CLAUDE SE PUSO A TRABAJAR</div>
+
+            <ol class="timeline" role="list" aria-label="Línea de tiempo de construcción">
+                <li class="timeline-step">
+                    <div class="step-card">
+                        <span class="step-time">2:10</span>
+                        <span class="step-text">Identidad de marca completa y sistema de logos</span>
+                    </div>
+                </li>
+                <li class="timeline-step">
+                    <div class="step-card">
+                        <span class="step-time">3:45</span>
+                        <span class="step-text">Landing page en español con SEO optimizado</span>
+                    </div>
+                </li>
+                <li class="timeline-step">
+                    <div class="step-card">
+                        <span class="step-time">5:20</span>
+                        <span class="step-text">Plantillas USCIS y tarjetas para ambos co-fundadores</span>
+                    </div>
+                </li>
+                <li class="timeline-step">
+                    <div class="step-card">
+                        <span class="step-time">6:48</span>
+                        <span class="step-text">Publicado en integrityparalegals.com</span>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="result-quote">
+                Pasamos de un número de teléfono y un sueño a una firma con marca completa &mdash; 27 clientes activos, documentos que cumplen con EOIR, y una presencia digital que compite con firmas 10 veces más grandes. Todo construido con Claude. Somos inmigrantes sirviendo inmigrantes, ahora con herramientas de nivel enterprise.
+            </div>
+        </div>
+
+        <!-- RIGHT: TARJETA DE CONTACTO -->
+        <div class="card-wrapper">
+            <div class="card-labels">
+                <span>DEMO EN VIVO</span>
+                <span>INTEGRITYPARALEGALS.COM</span>
+            </div>
+
+            <div class="contact-card">
+                <div class="card-header">
+                    <div class="card-brand">
+                        <div class="card-brand-icon">ILP</div>
+                        <div class="card-brand-name">
+                            <span class="primary">INTEGRITY</span>
+                            <span class="secondary">LEGAL PARTNERS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-profile">
+                    <div class="card-avatar">
+                        <img src="daniel-avatar-small.png" alt="Daniel Rodriguez — Co-Fundador, Integrity Legal Partners" width="200" height="200">
+                    </div>
+                    <div class="card-name">Daniel Rodriguez</div>
+                    <div class="card-title">Co-Fundador</div>
+                    <div class="card-company">Integrity Legal Partners</div>
+                    <div class="card-tags">
+                        Venezolana <span>&middot;</span> Colombiana <span>&middot;</span> Peruana
+                    </div>
+                </div>
+
+                <nav class="card-contacts" aria-label="Información de contacto">
+                    <a href="tel:+14352007716" class="contact-row" aria-label="Llamar al (435) 200-7716">
+                        <div class="contact-icon phone" aria-hidden="true">&#128222;</div>
+                        <span class="contact-text">(435) 200-7716</span>
+                    </a>
+                    <a href="mailto:daniel@integrityparalegals.com" class="contact-row" aria-label="Enviar email">
+                        <div class="contact-icon email" aria-hidden="true">&#9993;&#65039;</div>
+                        <span class="contact-text">daniel@integrityparalegals.com</span>
+                    </a>
+                    <a href="https://integrityparalegals.com" target="_blank" rel="noopener" class="contact-row" aria-label="Visitar sitio web">
+                        <div class="contact-icon web" aria-hidden="true">&#127760;</div>
+                        <span class="contact-text">integrityparalegals.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daniel-rodriguez-arango-6607aa3b1" target="_blank" rel="noopener" class="contact-row" aria-label="Ver perfil de LinkedIn">
+                        <div class="contact-icon linkedin" aria-hidden="true">in</div>
+                        <span class="contact-text">LinkedIn</span>
+                    </a>
+                </nav>
+
+                <div class="card-qr">
+                    <div class="qr-box" id="qr-container">
+                        <div class="qr-fallback">
+                            <a href="https://integrityparalegals.com">integrityparalegals.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="badge-row">
+        <div class="anthropic-badge">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.827 3.52l5.51 16.96H24L18.163 3.52h-4.336zM0 20.48h4.663L10.49 3.52H6.163L0 20.48z"/>
+            </svg>
+            Construido con Claude &mdash; Anthropic
+        </div>
+    </div>
+
+    <script async src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js" onload="generateQR()" onerror="console.warn('QR library failed')"></script>
+    <script>
+    function generateQR() {
+        try {
+            var qr = qrcode(0, 'M');
+            qr.addData('https://integrityparalegals.com');
+            qr.make();
+            var container = document.getElementById('qr-container');
+            if (container) {
+                container.innerHTML = qr.createImgTag(4, 8);
+                var imgEl = container.querySelector('img');
+                if (imgEl) {
+                    imgEl.style.borderRadius = '4px';
+                    imgEl.style.display = 'block';
+                    imgEl.alt = 'Código QR hacia integrityparalegals.com';
+                }
+            }
+        } catch (e) { console.warn('QR failed:', e); }
+    }
+    </script>
+
+</body>
+</html>
