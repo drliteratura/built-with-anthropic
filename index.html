@@ -4,145 +4,494 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cómo construí mi firma | Daniel Rodriguez — Integrity Legal Partners</title>
-    <meta name="description" content="Cómo Daniel Rodriguez construyó una firma paralegal de inmigración usando Claude AI — de cero presencia digital a 27+ clientes activos en Salt Lake City.">
+    <meta name="description" content="Cómo Daniel Rodriguez construyó una firma paralegal de inmigración completamente profesional usando inteligencia artificial de Claude — de cero presencia digital a 27+ clientes activos.">
     <meta name="author" content="Daniel Rodriguez">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cómo construí mi firma — Daniel Rodriguez">
-    <meta property="og:description" content="Inmigrante colombiano en Salt Lake City construyó una firma paralegal completa con Claude AI. Inmigrantes sirviendo inmigrantes con herramientas enterprise.">
-    <meta property="og:image" content="https://drliteratura.github.io/built-with-anthropic/daniel-avatar-small.png">
-    <meta property="og:url" content="https://drliteratura.github.io/built-with-anthropic/">
+    <meta property="og:description" content="Inmigrante colombiano en Salt Lake City construyó una firma paralegal completa con Claude AI. Brand, landing page, plantillas legales, tarjetas — todo en una tarde.">
+    <meta property="og:image" content="daniel-avatar-small.png">
     <meta property="og:locale" content="es_US">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Cómo construí mi firma — Daniel Rodriguez">
-    <meta name="twitter:description" content="Construí una firma paralegal de inmigración desde cero con Claude AI. Inmigrantes sirviendo inmigrantes.">
-    <meta name="twitter:image" content="https://drliteratura.github.io/built-with-anthropic/daniel-avatar-small.png">
-    <link rel="canonical" href="https://drliteratura.github.io/built-with-anthropic/">
+    <meta name="twitter:description" content="Construí una firma paralegal de inmigración desde cero con Claude AI. Inmigrantes sirviendo inmigrantes con herramientas de nivel enterprise.">
+
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Person","name":"Daniel Rodriguez","jobTitle":"Co-Fundador","worksFor":{"@type":"LegalService","name":"Integrity Legal Partners","url":"https://integrityparalegals.com","telephone":"+1-435-200-7716","address":{"@type":"PostalAddress","streetAddress":"470 W 200 N","addressLocality":"Salt Lake City","addressRegion":"UT","postalCode":"84103","addressCountry":"US"},"knowsLanguage":["Spanish","English"]},"url":"https://www.linkedin.com/in/daniel-rodriguez-arango-6607aa3b1"}
     </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&family=Oswald:wght@600&family=Source+Sans+Pro:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
-        :root{--terracota:#C2410C;--terracota-light:#ea580c;--navy:#1A365D;--navy-dark:#0f2440;--cream:#FDF6EC;--bg:#0a0e1a;--bg-card:#111827;--bg-bubble:#1a3050;--bg-step:rgba(255,255,255,0.025);--border:rgba(255,255,255,0.07);--border-glow:rgba(194,65,12,0.3);--text:#f1f5f9;--text-sub:#b0bec5;--text-dim:#78909c;--green:#4ade80;--whatsapp:#25D366}
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px 100px;-webkit-font-smoothing:antialiased}
-        .lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:4px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:4px;z-index:100}
-        .lang-btn{padding:6px 14px;border-radius:6px;font-size:.78rem;font-weight:600;text-decoration:none;color:var(--text-dim);transition:all .2s}
-        .lang-btn:hover{color:var(--text)}.lang-btn.active{background:var(--terracota);color:#fff}
-        .slide{max-width:1120px;width:100%;display:grid;grid-template-columns:1fr 370px;gap:56px;align-items:start}
-        @media(max-width:920px){.slide{grid-template-columns:1fr;gap:40px}}
-        .story{padding-top:8px}
-        .headline{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:700;line-height:1.08;margin-bottom:44px}
-        .headline .dot{color:var(--terracota)}
-        .agent-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-        .agent-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#d4956b,#c08b5c);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
-        .agent-avatar svg{width:24px;height:24px}
-        .agent-name{font-weight:700;font-size:.95rem}
-        .agent-role{font-size:.78rem;color:var(--text-dim)}
-        .chat-bubble{background:var(--bg-bubble);border-radius:18px;border-top-left-radius:4px;padding:18px 22px;font-size:.95rem;line-height:1.65;margin-bottom:40px;max-width:540px}
-        .timeline-label{font-size:.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:20px}
-        .timeline{position:relative;padding-left:28px;margin-bottom:40px;list-style:none}
-        .timeline::before{content:'';position:absolute;left:5px;top:10px;bottom:10px;width:1px;background:linear-gradient(to bottom,var(--terracota),var(--border))}
-        .timeline-step{position:relative;margin-bottom:14px}
-        .timeline-step:last-child{margin-bottom:0}
-        .timeline-step::before{content:'';position:absolute;left:-28px;top:50%;transform:translateY(-50%);width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--terracota-light)}
-        .step-card{background:var(--bg-step);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;transition:border-color .3s}
-        .step-card:hover{border-color:var(--border-glow)}
-        .step-time{font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:500;color:var(--green);min-width:38px}
-        .step-text{font-size:.9rem;font-weight:500}
-        .result-quote{background:rgba(194,65,12,0.06);border:1px solid rgba(194,65,12,0.12);border-radius:14px;padding:18px 22px;font-size:.92rem;color:var(--text-sub);font-style:italic;line-height:1.65}
-        .card-wrapper{position:relative}
-        .card-labels{display:flex;justify-content:space-between;margin-bottom:12px;font-size:.68rem;text-transform:uppercase;letter-spacing:2px;color:var(--text-dim);font-weight:600}
-        .contact-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5),0 0 80px rgba(194,65,12,0.04)}
-        .card-header{background:linear-gradient(135deg,var(--navy),var(--navy-dark));padding:18px 22px;display:flex;align-items:center;border-bottom:3px solid var(--terracota)}
-        .card-brand{display:flex;align-items:center;gap:10px}
-        .card-brand-icon{width:34px;height:34px;background:var(--terracota);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:.75rem}
-        .card-brand-name{line-height:1.2}
-        .card-brand-name .primary{font-family:'Libre Baskerville',Georgia,serif;font-weight:700;font-size:.95rem;color:#fff;display:block}
-        .card-brand-name .secondary{font-family:'Source Sans Pro',sans-serif;font-size:.6rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:2.5px;display:block}
-        .card-profile{padding:28px 24px 16px;text-align:center;border-bottom:1px solid var(--border)}
-        .card-avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 16px;overflow:hidden;box-shadow:0 0 0 3px var(--bg-card),0 0 0 5px var(--terracota)}
-        .card-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
-        .card-name{font-family:'Libre Baskerville',Georgia,serif;font-size:1.3rem;font-weight:700;margin-bottom:4px}
-        .card-title{font-size:.88rem;color:var(--terracota-light);font-weight:600;margin-bottom:2px}
-        .card-company{font-size:.82rem;color:var(--text-sub);margin-bottom:6px}
-        .card-service{font-size:.72rem;color:var(--text-dim);margin-bottom:10px;font-weight:500}
-        .card-tags{display:flex;justify-content:center;gap:6px;font-size:.7rem;color:var(--terracota-light);font-weight:500}
-        .card-tags span{opacity:.5}
-        .card-contacts{padding:6px 14px}
-        .contact-row{display:flex;align-items:center;gap:14px;padding:12px;border-radius:10px;text-decoration:none;color:var(--text);transition:background .2s}
-        .contact-row:hover{background:rgba(255,255,255,0.035)}
-        .contact-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
-        .contact-icon.whatsapp{background:rgba(37,211,102,0.12);color:var(--whatsapp)}
-        .contact-icon.phone{background:rgba(34,197,94,0.1);color:#22c55e}
-        .contact-icon.email{background:rgba(96,165,250,0.1);color:#60a5fa}
-        .contact-icon.web{background:rgba(74,222,128,0.1);color:#4ade80}
-        .contact-icon.linkedin{background:rgba(96,165,250,0.1);color:#60a5fa;font-weight:700;font-size:.9rem}
-        .contact-text{font-size:.87rem;font-weight:500}
-        .card-actions{padding:8px 18px 18px;display:flex;gap:10px}
-        .card-action-btn{flex:1;padding:11px 12px;border-radius:10px;font-size:.78rem;font-weight:600;text-decoration:none;text-align:center;transition:all .2s;cursor:pointer;border:none;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px}
-        .btn-vcard{background:var(--navy);color:#fff}
-        .btn-vcard:hover{background:var(--terracota)}
-        .btn-share{background:rgba(255,255,255,0.06);color:var(--text);border:1px solid var(--border)}
-        .btn-share:hover{background:rgba(255,255,255,0.1)}
-        .card-qr{padding:8px 24px 20px;display:flex;justify-content:center}
-        .qr-box{background:#fff;border-radius:12px;padding:10px;display:flex;align-items:center;justify-content:center;min-width:130px;min-height:130px}
-        .qr-box img{display:block;border-radius:4px}
-        .qr-fallback{text-align:center;font-size:.75rem;color:#64748b}
-        .qr-fallback a{color:var(--terracota);text-decoration:none;font-weight:600}
-        /* Share modal */
-        .share-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;align-items:center;justify-content:center;padding:24px}
-        .share-modal.show{display:flex}
-        .share-panel{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;max-width:380px;width:100%}
-        .share-panel h3{font-size:1.1rem;font-weight:700;margin-bottom:16px}
-        .share-links{display:flex;flex-direction:column;gap:8px}
-        .share-link{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;text-decoration:none;color:var(--text);font-size:.9rem;font-weight:500;transition:background .2s}
-        .share-link:hover{background:rgba(255,255,255,0.05)}
-        .share-link .icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
-        .share-link .icon.wa{background:rgba(37,211,102,0.15);color:var(--whatsapp)}
-        .share-link .icon.li{background:rgba(96,165,250,0.12);color:#60a5fa;font-weight:700}
-        .share-link .icon.tw{background:rgba(148,163,184,0.12);color:var(--text-sub)}
-        .share-link .icon.cp{background:rgba(194,65,12,0.12);color:var(--terracota-light)}
-        .share-close{margin-top:16px;width:100%;padding:10px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text-sub);font-size:.85rem;cursor:pointer;font-family:inherit}
-        .share-close:hover{background:rgba(255,255,255,0.1)}
-        .copied-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--green);color:#000;padding:10px 20px;border-radius:10px;font-size:.85rem;font-weight:600;z-index:300;display:none}
-        .copied-toast.show{display:block;animation:fadeInOut 2s ease forwards}
-        @keyframes fadeInOut{0%{opacity:0;transform:translateX(-50%) translateY(10px)}15%{opacity:1;transform:translateX(-50%) translateY(0)}85%{opacity:1}100%{opacity:0}}
-        /* Sticky mobile CTA */
-        .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg-card);border-top:1px solid var(--border);padding:12px 16px;z-index:100;gap:10px}
-        .mobile-cta a{flex:1;padding:12px;border-radius:10px;font-size:.85rem;font-weight:600;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px}
-        .mcta-wa{background:var(--whatsapp);color:#fff}
-        .mcta-call{background:var(--terracota);color:#fff}
-        @media(max-width:920px){
-            body{padding:32px 16px 90px;align-items:flex-start;justify-content:flex-start}
-            .contact-card{max-width:390px;margin:0 auto}
-            .mobile-cta{display:flex}
+        :root {
+            --terracota: #C2410C;
+            --terracota-light: #ea580c;
+            --terracota-glow: rgba(194,65,12,0.15);
+            --navy: #1A365D;
+            --navy-dark: #0f2440;
+            --cream: #FDF6EC;
+            --bg: #0a0e1a;
+            --bg-card: #111827;
+            --bg-bubble: #1a3050;
+            --bg-step: rgba(255,255,255,0.025);
+            --border: rgba(255,255,255,0.07);
+            --border-glow: rgba(194,65,12,0.3);
+            --text: #f1f5f9;
+            --text-sub: #b0bec5;
+            --text-dim: #78909c;
+            --green: #4ade80;
         }
-        @media(max-width:480px){
-            .headline{font-size:2.2rem;margin-bottom:36px}
-            .chat-bubble{font-size:.88rem;padding:16px 18px}
-            .step-card{padding:12px 14px}
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
+            -webkit-font-smoothing: antialiased;
         }
-        .badge-row{margin-top:56px;display:flex;justify-content:center}
-        .anthropic-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);padding:10px 22px;border-radius:10px;font-size:.82rem;color:var(--text-dim)}
-        .anthropic-badge svg{width:18px;height:18px;fill:var(--text-dim)}
+
+        /* Language switcher */
+        .lang-switch {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 4px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 4px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-dim);
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover { color: var(--text); }
+        .lang-btn.active { background: var(--terracota); color: #fff; }
+
+        .slide {
+            max-width: 1120px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 370px;
+            gap: 56px;
+            align-items: start;
+        }
+
+        @media (max-width: 920px) {
+            .slide { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        .story { padding-top: 8px; }
+
+        .headline {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.08;
+            margin-bottom: 44px;
+        }
+
+        .headline .dot { color: var(--terracota); }
+
+        .agent-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .agent-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4956b 0%, #c08b5c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .agent-avatar svg { width: 24px; height: 24px; }
+        .agent-name { font-weight: 700; font-size: 0.95rem; }
+        .agent-role { font-size: 0.78rem; color: var(--text-dim); }
+
+        .chat-bubble {
+            background: var(--bg-bubble);
+            border-radius: 18px;
+            border-top-left-radius: 4px;
+            padding: 18px 22px;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--text);
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+
+        .timeline-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-dim);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 40px;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            bottom: 10px;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--terracota), var(--border));
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 14px;
+        }
+
+        .timeline-step:last-child { margin-bottom: 0; }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 2px solid var(--terracota-light);
+        }
+
+        .step-card {
+            background: var(--bg-step);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .step-card:hover { border-color: var(--border-glow); }
+
+        .step-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--green);
+            min-width: 38px;
+        }
+
+        .step-text { font-size: 0.9rem; font-weight: 500; }
+
+        .result-quote {
+            background: rgba(194,65,12,0.06);
+            border: 1px solid rgba(194,65,12,0.12);
+            border-radius: 14px;
+            padding: 18px 22px;
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            font-style: italic;
+            line-height: 1.65;
+        }
+
+        .card-wrapper { position: relative; }
+
+        .card-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 80px rgba(194,65,12,0.04);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid var(--terracota);
+        }
+
+        .card-brand { display: flex; align-items: center; gap: 10px; }
+
+        .card-brand-icon {
+            width: 34px;
+            height: 34px;
+            background: var(--terracota);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .card-brand-name { line-height: 1.2; }
+        .card-brand-name .primary { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; font-size: 0.95rem; color: #fff; display: block; }
+        .card-brand-name .secondary { font-family: 'Source Sans Pro', sans-serif; font-size: 0.6rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2.5px; display: block; }
+
+        .card-profile { padding: 28px 24px 22px; text-align: center; border-bottom: 1px solid var(--border); }
+
+        .card-avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            overflow: hidden;
+            box-shadow: 0 0 0 3px var(--bg-card), 0 0 0 5px var(--terracota);
+        }
+
+        .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+
+        .card-name { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .card-title { font-size: 0.88rem; color: var(--terracota-light); font-weight: 600; margin-bottom: 2px; }
+        .card-company { font-size: 0.82rem; color: var(--text-sub); margin-bottom: 10px; }
+        .card-tags { display: flex; justify-content: center; gap: 6px; font-size: 0.7rem; color: var(--terracota-light); font-weight: 500; }
+        .card-tags span { opacity: 0.5; }
+
+        .card-contacts { padding: 6px 14px; }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            transition: background 0.2s;
+        }
+
+        .contact-row:hover { background: rgba(255,255,255,0.035); }
+
+        .contact-icon {
+            width: 36px; height: 36px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; flex-shrink: 0;
+        }
+
+        .contact-icon.phone { background: rgba(34,197,94,0.1); color: #22c55e; }
+        .contact-icon.email { background: rgba(96,165,250,0.1); color: #60a5fa; }
+        .contact-icon.web { background: rgba(74,222,128,0.1); color: #4ade80; }
+        .contact-icon.linkedin { background: rgba(96,165,250,0.1); color: #60a5fa; font-weight: 700; font-size: 0.9rem; }
+        .contact-icon.whatsapp { background: rgba(37,211,102,0.1); color: #25d366; }
+
+        .contact-text { font-size: 0.87rem; font-weight: 500; }
+
+        /* Social proof metrics */
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .metric-card {
+            background: rgba(194,65,12,0.06);
+            border: 1px solid rgba(194,65,12,0.12);
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--terracota-light);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.3;
+        }
+
+        /* CTA consulta gratuita */
+        .cta-consulta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25d366;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin: 16px 24px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .cta-consulta:hover { background: #1fb855; transform: translateY(-1px); }
+
+        .cta-consulta svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+
+        .cta-sub {
+            text-align: center;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            padding: 0 24px 8px;
+        }
+
+        /* B2B section */
+        .b2b-section {
+            margin-top: 28px;
+            background: rgba(26,54,93,0.15);
+            border: 1px solid rgba(26,54,93,0.3);
+            border-radius: 14px;
+            padding: 22px 24px;
+            text-align: center;
+        }
+
+        .b2b-title {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--text-dim);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .b2b-text {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        .b2b-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--navy);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .b2b-cta:hover { background: var(--navy-dark); }
+
+        @media (max-width: 480px) {
+            .metrics-row { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .metric-number { font-size: 1.3rem; }
+            .metric-label { font-size: 0.62rem; }
+            .cta-consulta { margin: 16px 16px; font-size: 0.85rem; padding: 12px 18px; }
+        }
+
+        .card-qr { padding: 14px 24px 24px; display: flex; justify-content: center; }
+
+        .qr-box {
+            background: #fff; border-radius: 12px; padding: 10px;
+            display: flex; align-items: center; justify-content: center;
+            min-width: 140px; min-height: 140px;
+        }
+
+        .qr-box img { display: block; border-radius: 4px; }
+        .qr-fallback { text-align: center; font-size: 0.75rem; color: #64748b; }
+        .qr-fallback a { color: var(--terracota); text-decoration: none; font-weight: 600; }
+
+        .badge-row { margin-top: 56px; display: flex; justify-content: center; }
+
+        .anthropic-badge {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+            padding: 10px 22px; border-radius: 10px;
+            font-size: 0.82rem; color: var(--text-dim);
+        }
+
+        .anthropic-badge svg { width: 18px; height: 18px; fill: var(--text-dim); }
+
+        @media (max-width: 920px) {
+            body { padding: 32px 16px; align-items: flex-start; justify-content: flex-start; }
+            .contact-card { max-width: 390px; margin: 0 auto; }
+        }
+
+        @media (max-width: 480px) {
+            .headline { font-size: 2.2rem; margin-bottom: 36px; }
+            .chat-bubble { font-size: 0.88rem; padding: 16px 18px; }
+            .step-card { padding: 12px 14px; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Language Switch -->
     <div class="lang-switch">
         <a href="index.html" class="lang-btn active">ES</a>
         <a href="en.html" class="lang-btn">EN</a>
     </div>
 
     <div class="slide">
+
+        <!-- LEFT: HISTORIA -->
         <div class="story">
             <h1 class="headline">Cómo construí<br>la mía<span class="dot">.</span></h1>
 
             <div class="agent-row">
                 <div class="agent-avatar">
-                    <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M13.827 3.52l5.51 16.96H24L18.163 3.52h-4.336zM0 20.48h4.663L10.49 3.52H6.163L0 20.48z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.827 3.52l5.51 16.96H24L18.163 3.52h-4.336zM0 20.48h4.663L10.49 3.52H6.163L0 20.48z"/>
+                    </svg>
                 </div>
                 <div>
                     <div class="agent-name">Claude</div>
@@ -151,12 +500,12 @@
             </div>
 
             <div class="chat-bubble">
-                Somos dos inmigrantes colombianos en Utah. Necesitamos construir una firma paralegal de inmigración desde cero &mdash; marca, landing page, tarjetas, plantillas legales USCIS, y un sistema para manejar 27+ familias que confían en nosotros. Sin presupuesto. Sin equipo técnico. Solo nosotros y Claude.
+                Necesito construir mi firma paralegal de inmigración desde cero &mdash; identidad de marca, landing page, tarjetas de presentación, plantillas de documentos legales, y un sistema para manejar 27+ casos activos. Todo optimizado para la comunidad latina en Utah.
             </div>
 
             <div class="timeline-label">CLAUDE SE PUSO A TRABAJAR</div>
 
-            <ol class="timeline" role="list" aria-label="Línea de tiempo">
+            <ol class="timeline" role="list" aria-label="Línea de tiempo de construcción">
                 <li class="timeline-step">
                     <div class="step-card">
                         <span class="step-time">2:10</span>
@@ -172,7 +521,7 @@
                 <li class="timeline-step">
                     <div class="step-card">
                         <span class="step-time">5:20</span>
-                        <span class="step-text">Plantillas EOIR-compliant y tarjetas para ambos fundadores</span>
+                        <span class="step-text">Plantillas USCIS y tarjetas para ambos co-fundadores</span>
                     </div>
                 </li>
                 <li class="timeline-step">
@@ -184,15 +533,31 @@
             </ol>
 
             <div class="result-quote">
-                De un número de teléfono y un sueño a una firma con marca completa &mdash; 27 familias protegidas, documentos que cumplen con EOIR, y una presencia digital que compite con firmas 10 veces más grandes. Construido con Claude. Somos inmigrantes sirviendo inmigrantes, ahora con herramientas de nivel enterprise.
+                De un número de teléfono y un sueño a una firma con marca completa &mdash; documentos que cumplen con EOIR, y una presencia digital que compite con firmas 10 veces más grandes. Construido con Claude. Somos inmigrantes sirviendo inmigrantes, ahora con herramientas de nivel enterprise.
+            </div>
+
+            <!-- Social Proof Metrics -->
+            <div class="metrics-row">
+                <div class="metric-card">
+                    <div class="metric-number">27+</div>
+                    <div class="metric-label">Familias protegidas</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">Docs aceptados USCIS</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">0</div>
+                    <div class="metric-label">Casos devueltos</div>
+                </div>
             </div>
         </div>
 
-        <!-- CONTACT CARD -->
+        <!-- RIGHT: TARJETA DE CONTACTO -->
         <div class="card-wrapper">
             <div class="card-labels">
-                <span>CARTA DE PRESENTACI&Oacute;N</span>
-                <span>SALT LAKE CITY, UT</span>
+                <span>DEMO EN VIVO</span>
+                <span>INTEGRITYPARALEGALS.COM</span>
             </div>
 
             <div class="contact-card">
@@ -208,110 +573,96 @@
 
                 <div class="card-profile">
                     <div class="card-avatar">
-                        <img src="daniel-avatar-small.png" alt="Daniel Rodriguez" width="200" height="200">
+                        <img src="daniel-avatar-small.png" alt="Daniel Rodriguez — Co-Fundador, Integrity Legal Partners" width="200" height="200">
                     </div>
                     <div class="card-name">Daniel Rodriguez</div>
                     <div class="card-title">Co-Fundador</div>
                     <div class="card-company">Integrity Legal Partners</div>
-                    <div class="card-service">Servicios de Inmigración &middot; Asilo &middot; Permisos de Trabajo</div>
                     <div class="card-tags">
                         Venezolana <span>&middot;</span> Colombiana <span>&middot;</span> Peruana
                     </div>
                 </div>
 
-                <nav class="card-contacts" aria-label="Contacto">
-                    <a href="https://wa.me/14352007716?text=Hola%20Daniel%2C%20vi%20tu%20página%20y%20me%20gustaría%20conocer%20más%20sobre%20sus%20servicios%20de%20inmigración." class="contact-row" aria-label="Enviar WhatsApp">
-                        <div class="contact-icon whatsapp" aria-hidden="true">&#128172;</div>
+                <nav class="card-contacts" aria-label="Información de contacto">
+                    <a href="https://wa.me/14352007716?text=Hola%20Daniel%2C%20quiero%20agendar%20mi%20consulta%20gratuita%20de%2015%20minutos.%20Mi%20caso%20es%20sobre%3A%20" class="contact-row" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <div class="contact-icon whatsapp" aria-hidden="true">💬</div>
                         <span class="contact-text">WhatsApp</span>
                     </a>
-                    <a href="tel:+14352007716" class="contact-row" aria-label="Llamar">
+                    <a href="tel:+14352007716" class="contact-row" aria-label="Llamar al (435) 200-7716">
                         <div class="contact-icon phone" aria-hidden="true">&#128222;</div>
                         <span class="contact-text">(435) 200-7716</span>
                     </a>
-                    <a href="mailto:daniel@integrityparalegals.com" class="contact-row" aria-label="Email">
+                    <a href="mailto:daniel@integrityparalegals.com" class="contact-row" aria-label="Enviar email">
                         <div class="contact-icon email" aria-hidden="true">&#9993;&#65039;</div>
                         <span class="contact-text">daniel@integrityparalegals.com</span>
                     </a>
-                    <a href="https://integrityparalegals.com" target="_blank" rel="noopener" class="contact-row" aria-label="Sitio web">
+                    <a href="https://integrityparalegals.com" target="_blank" rel="noopener" class="contact-row" aria-label="Visitar sitio web">
                         <div class="contact-icon web" aria-hidden="true">&#127760;</div>
                         <span class="contact-text">integrityparalegals.com</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/daniel-rodriguez-arango-6607aa3b1" target="_blank" rel="noopener" class="contact-row" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/daniel-rodriguez-arango-6607aa3b1" target="_blank" rel="noopener" class="contact-row" aria-label="Ver perfil de LinkedIn">
                         <div class="contact-icon linkedin" aria-hidden="true">in</div>
                         <span class="contact-text">LinkedIn</span>
                     </a>
                 </nav>
 
-                <!-- Action buttons -->
-                <div class="card-actions">
-                    <button class="card-action-btn btn-vcard" onclick="downloadVCard()">&#128241; Guardar contacto</button>
-                    <button class="card-action-btn btn-share" onclick="openShare()">&#128279; Compartir</button>
-                </div>
+                <!-- CTA Consulta Gratuita -->
+                <a href="https://wa.me/14352007716?text=Hola%20Daniel%2C%20quiero%20agendar%20mi%20consulta%20gratuita%20de%2015%20minutos.%20Mi%20caso%20es%20sobre%3A%20" class="cta-consulta" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.4 0-4.637-.82-6.413-2.196l-.448-.367-2.86.958.958-2.86-.367-.448A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                    Consulta gratuita — 15 min
+                </a>
+                <div class="cta-sub">Sin compromiso · Respuesta en menos de 2 horas</div>
 
                 <div class="card-qr">
                     <div class="qr-box" id="qr-container">
-                        <div class="qr-fallback"><a href="https://integrityparalegals.com">integrityparalegals.com</a></div>
+                        <div class="qr-fallback">
+                            <a href="https://integrityparalegals.com">integrityparalegals.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- B2B Section para abogados -->
+            <div class="b2b-section">
+                <div class="b2b-title">PARA ABOGADOS DE INMIGRACIÓN</div>
+                <div class="b2b-text">Trabajamos como soporte paralegal para firmas en Utah. Documentos EOIR-compliant, traducciones certificadas, y manejo de casos.</div>
+                <a href="https://wa.me/14352007716?text=Hola%20Daniel%2C%20soy%20abogado%20de%20inmigraci%C3%B3n%20y%20me%20interesa%20explorar%20una%20alianza%20paralegal." class="b2b-cta" target="_blank" rel="noopener">
+                    Hablemos →
+                </a>
+            </div>
         </div>
+
     </div>
 
     <div class="badge-row">
         <div class="anthropic-badge">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.827 3.52l5.51 16.96H24L18.163 3.52h-4.336zM0 20.48h4.663L10.49 3.52H6.163L0 20.48z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.827 3.52l5.51 16.96H24L18.163 3.52h-4.336zM0 20.48h4.663L10.49 3.52H6.163L0 20.48z"/>
+            </svg>
             Construido con Claude &mdash; Anthropic
         </div>
     </div>
 
-    <!-- Share Modal -->
-    <div class="share-modal" id="shareModal">
-        <div class="share-panel">
-            <h3>Compartir esta página</h3>
-            <div class="share-links">
-                <a href="https://wa.me/?text=Mira%20cómo%20Daniel%20construyó%20su%20firma%20de%20inmigración%20con%20IA%3A%20https%3A%2F%2Fdrliteratura.github.io%2Fbuilt-with-anthropic%2F" target="_blank" rel="noopener" class="share-link"><div class="icon wa">&#128172;</div>WhatsApp</a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://drliteratura.github.io/built-with-anthropic/" target="_blank" rel="noopener" class="share-link"><div class="icon li">in</div>LinkedIn</a>
-                <a href="https://twitter.com/intent/tweet?text=Inmigrante%20colombiano%20construyó%20una%20firma%20paralegal%20completa%20con%20Claude%20AI.%20Impresionante.&url=https://drliteratura.github.io/built-with-anthropic/" target="_blank" rel="noopener" class="share-link"><div class="icon tw">&#120143;</div>Twitter / X</a>
-                <button onclick="copyLink()" class="share-link" style="border:none;background:none;cursor:pointer;text-align:left;width:100%;font-family:inherit"><div class="icon cp">&#128203;</div><span>Copiar enlace</span></button>
-            </div>
-            <button class="share-close" onclick="closeShare()">Cerrar</button>
-        </div>
-    </div>
-
-    <!-- Copied toast -->
-    <div class="copied-toast" id="copiedToast">Enlace copiado</div>
-
-    <!-- Sticky mobile CTA -->
-    <div class="mobile-cta">
-        <a href="https://wa.me/14352007716?text=Hola%20Daniel%2C%20vi%20tu%20página%20y%20necesito%20ayuda%20con%20inmigración." class="mcta-wa">&#128172; WhatsApp</a>
-        <a href="tel:+14352007716" class="mcta-call">&#128222; Llamar</a>
-    </div>
-
-    <script async src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js" onload="generateQR()" onerror="console.warn('QR failed')"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js" onload="generateQR()" onerror="console.warn('QR library failed')"></script>
     <script>
-    function generateQR(){try{var q=qrcode(0,'M');q.addData('https://drliteratura.github.io/built-with-anthropic/');q.make();var c=document.getElementById('qr-container');if(c){c.innerHTML=q.createImgTag(4,6);var i=c.querySelector('img');if(i){i.style.borderRadius='4px';i.style.display='block';i.alt='QR code'}}}catch(e){}}
-
-    function downloadVCard(){
-        var vcard='BEGIN:VCARD\nVERSION:3.0\nFN:Daniel Rodriguez\nORG:Integrity Legal Partners\nTITLE:Co-Fundador\nTEL;TYPE=CELL:+14352007716\nEMAIL:daniel@integrityparalegals.com\nURL:https://integrityparalegals.com\nNOTE:Servicios paralegales de inmigración — Asilo, Permisos de Trabajo, Peticiones Familiares. Comunidad Venezolana, Colombiana, Peruana. Salt Lake City, Utah.\nADR;TYPE=WORK:;;470 W 200 N;Salt Lake City;UT;84103;US\nEND:VCARD';
-        var blob=new Blob([vcard],{type:'text/vcard;charset=utf-8'});
-        var url=URL.createObjectURL(blob);
-        var a=document.createElement('a');
-        a.href=url;a.download='Daniel_Rodriguez_ILP.vcf';
-        document.body.appendChild(a);a.click();
-        document.body.removeChild(a);URL.revokeObjectURL(url);
-    }
-
-    function openShare(){document.getElementById('shareModal').classList.add('show')}
-    function closeShare(){document.getElementById('shareModal').classList.remove('show')}
-    document.getElementById('shareModal').addEventListener('click',function(e){if(e.target===this)closeShare()});
-
-    function copyLink(){
-        navigator.clipboard.writeText('https://drliteratura.github.io/built-with-anthropic/').then(function(){
-            var t=document.getElementById('copiedToast');t.classList.add('show');
-            setTimeout(function(){t.classList.remove('show')},2200);
-            closeShare();
-        });
+    function generateQR() {
+        try {
+            var qr = qrcode(0, 'M');
+            qr.addData('https://integrityparalegals.com');
+            qr.make();
+            var container = document.getElementById('qr-container');
+            if (container) {
+                container.innerHTML = qr.createImgTag(4, 8);
+                var imgEl = container.querySelector('img');
+                if (imgEl) {
+                    imgEl.style.borderRadius = '4px';
+                    imgEl.style.display = 'block';
+                    imgEl.alt = 'Código QR hacia integrityparalegals.com';
+                }
+            }
+        } catch (e) { console.warn('QR failed:', e); }
     }
     </script>
+
 </body>
 </html>
